@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<!-- Creado por Alfonso Boldo -->
+<html lang="es" class="scroll-smooth">
+<head>
+<!-- Creado por Alfonso Boldo -->
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>TwoCell | Refacciones Originales y Reparación de Celulares en CDMX</title>
+<meta name="description" content="TwoCell - Servicio técnico profesional con piezas 100% originales. 16+ años de experiencia en el Centro Histórico de la CDMX. Garantía real. 4.9★ en Google.">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;0,9..40,900;1,9..40,400&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        "tc-blue": "#115fd4",
+        "tc-blue-dark": "#0d4ba8",
+        "tc-amber": "#f59e0b",
+        "tc-amber-dark": "#d97706",
+        "tc-slate": "#0f172a",
+        "tc-gray": "#f1f5f9",
+      },
+      fontFamily: {
+        "display": ["Outfit", "sans-serif"],
+        "body": ["DM Sans", "sans-serif"]
+      }
+    }
+  }
+}
+</script>
+<style>
+body { font-family: 'DM Sans', sans-serif; }
+h1,h2,h3,h4,h5,h6,.font-display { font-family: 'Outfit', sans-serif; }
+.material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+.material-symbols-outlined.filled { font-variation-settings: 'FILL' 1; }
+
+/* Smooth scroll offset for sticky header */
+html { scroll-padding-top: 90px; }
+
+/* Hero gradient overlay */
+.hero-gradient {
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.95) 25%, rgba(255,255,255,0.5) 45%, rgba(255,255,255,0.05) 60%, transparent 100%);
+}
+@media (max-width: 1023px) {
+  .hero-gradient {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 30%, rgba(255,255,255,0.4) 60%, rgba(255,255,255,0.15) 100%);
+  }
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+.animate-fade-in-up { animation: fadeInUp 0.7s ease-out forwards; }
+.animate-fade-in { animation: fadeIn 0.8s ease-out forwards; }
+.animate-slide-left { animation: slideInLeft 0.6s ease-out forwards; }
+.delay-100 { animation-delay: 0.1s; opacity: 0; }
+.delay-200 { animation-delay: 0.2s; opacity: 0; }
+.delay-300 { animation-delay: 0.3s; opacity: 0; }
+.delay-400 { animation-delay: 0.4s; opacity: 0; }
+.delay-500 { animation-delay: 0.5s; opacity: 0; }
+
+/* Call button pulse */
+.call-pulse::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: #22c55e;
+  animation: pulse-ring 1.5s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  z-index: -1;
+}
+
+/* Review cards scroll */
+.reviews-scroll::-webkit-scrollbar { display: none; }
+.reviews-scroll { -ms-overflow-style: none; scrollbar-width: none; }
+
+/* Star rating */
+.star-filled { color: #f59e0b; font-variation-settings: 'FILL' 1; }
+
+/* FAQ tabs */
+.faq-tab { background: white; color: #64748b; border: 1px solid #e2e8f0; }
+.faq-tab:hover { color: #115fd4; border-color: #115fd4; }
+.faq-tab.active { background: #115fd4; color: white; border-color: #115fd4; }
+.faq-chevron.open { transform: rotate(180deg); }
+</style>
+</head>
+<body class="bg-white text-slate-900">
+
+
+<!-- ============================================ -->
+<!-- HEADER - Sticky Navigation -->
+<!-- ============================================ -->
+<header class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-100 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 h-20 flex items-center justify-between">
+    <a href="#" class="flex items-center gap-3">
+      <img src="images/logo-twocell.png" alt="TwoCell Logo" class="h-12 w-auto">
+      <div class="hidden sm:block">
+        <span class="text-lg font-display font-black tracking-tight text-tc-blue hidden">TWOCELL</span>
+        <p class="text-[10px] uppercase tracking-[0.2em] font-bold text-slate-400 leading-none">Refacciones Originales</p>
+      </div>
+    </a>
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="#servicios" class="text-sm font-semibold text-slate-600 hover:text-tc-blue transition-colors">Servicios</a>
+      <a href="#refacciones" class="text-sm font-semibold text-slate-600 hover:text-tc-blue transition-colors">Refacciones</a>
+      <a href="#testimonios" class="text-sm font-semibold text-slate-600 hover:text-tc-blue transition-colors">Testimonios</a>
+      <a href="#faq" class="text-sm font-semibold text-slate-600 hover:text-tc-blue transition-colors">FAQ</a>
+      <a href="#ubicacion" class="text-sm font-semibold text-slate-600 hover:text-tc-blue transition-colors">Ubicación</a>
+    </nav>
+    <div class="flex items-center gap-4">
+      <a href="tel:5555124672" class="hidden sm:flex items-center gap-2 text-tc-blue font-bold text-sm hover:text-tc-blue-dark transition-colors">
+        <span class="material-symbols-outlined text-lg">call</span>
+        55 5512 4672
+      </a>
+      <a href="tel:5555124672" class="bg-tc-blue text-white px-5 py-2.5 rounded-lg font-display font-bold text-sm hover:bg-tc-blue-dark transition-all shadow-lg shadow-tc-blue/20 hover:shadow-tc-blue/30">
+        Llamar Ahora
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ============================================ -->
+<!-- HERO SECTION - Split Layout with Gradient -->
+<!-- ============================================ -->
+<section class="relative bg-white overflow-hidden">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row min-h-[600px] lg:min-h-[650px]">
+    <!-- Left: Content -->
+    <div class="w-full lg:w-[55%] px-6 sm:px-8 lg:px-16 xl:px-20 py-12 lg:py-0 flex flex-col justify-center relative z-10">
+      <a href="#faq" onclick="setTimeout(()=>showFaqCategory('tiempos'),100)" class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-tc-blue/10 text-tc-blue rounded-full text-xs font-bold uppercase tracking-wider mb-6 w-fit animate-fade-in-up cursor-pointer hover:bg-tc-blue/20 transition-colors">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tc-blue opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-tc-blue"></span>
+        </span>
+        Servicio Express Disponible
+      </a>
+      <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-[3.5rem] font-black text-tc-slate leading-[1.08] mb-6 tracking-tight animate-fade-in-up delay-100">
+        Servicio técnico profesional con piezas <span class="text-tc-blue">100% originales.</span>
+      </h1>
+      <p class="text-lg text-slate-500 mb-10 max-w-lg leading-relaxed animate-fade-in-up delay-200">
+        Más de 16 años brindando soluciones rápidas y confiables en el Centro Histórico de la CDMX. Garantía real en cada reparación.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 animate-fade-in-up delay-300">
+        <a href="tel:5555124672" class="flex-1 bg-tc-blue text-white h-14 rounded-lg font-display font-bold text-base flex items-center justify-center gap-2 hover:bg-tc-blue-dark hover:scale-[1.02] transition-all shadow-lg shadow-tc-blue/25">
+          <span class="material-symbols-outlined">build</span>
+          Reparar mi Equipo
+        </a>
+        <a href="tel:5555124672" class="flex-1 bg-white border-2 border-slate-200 text-slate-800 h-14 rounded-lg font-display font-bold text-base flex items-center justify-center gap-2 hover:bg-slate-50 hover:border-slate-300 transition-all">
+          <span class="material-symbols-outlined">inventory_2</span>
+          Cotizar Refacción
+        </a>
+      </div>
+    </div>
+    <!-- Right: Image with gradient overlay -->
+    <div class="w-full lg:w-[45%] relative min-h-[350px] lg:min-h-0">
+      <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('images/hero-principal.jpg');"></div>
+      <div class="hero-gradient absolute inset-0"></div>
+      <!-- Experience badge -->
+      <div class="absolute bottom-8 left-8 bg-white/95 backdrop-blur-sm p-5 rounded-xl shadow-2xl border-l-4 border-tc-amber max-w-[220px] hidden lg:block animate-fade-in-up delay-500">
+        <p class="font-display text-4xl font-black text-tc-slate leading-none">16+ <span class="text-base font-bold">Años</span></p>
+        <p class="text-sm font-medium text-slate-500 mt-1.5">Líderes en reparación especializada en la CDMX.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- TRUST RIBBON -->
+<!-- ============================================ -->
+<section class="bg-tc-blue py-4 overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-wrap justify-center lg:justify-around items-center gap-x-8 gap-y-3 text-white/95 text-xs sm:text-sm font-bold tracking-wider uppercase">
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-tc-amber text-base">verified</span> Piezas 100% Originales</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-tc-amber text-base">bolt</span> Reparación al Instante</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-tc-amber text-base">location_on</span> Centro Histórico CDMX</div>
+      <div class="flex items-center gap-2"><span class="material-symbols-outlined text-tc-amber text-base">shield</span> Garantía Real</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SERVICES SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 px-4 bg-tc-gray" id="servicios">
+  <div class="max-w-7xl mx-auto">
+    <div class="max-w-3xl mb-14">
+      <h2 class="text-tc-blue font-display font-bold tracking-widest text-sm uppercase mb-3">Servicios</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal mb-6">Servicio Técnico Profesional y Especializado</h3>
+      <p class="text-slate-600 leading-relaxed">Desde un detalle estético hasta una falla compleja, tenemos la experiencia para resolverlo. Realizamos instalaciones de alta precisión en:</p>
+    </div>
+
+    <!-- Servicios principales -->
+    <div class="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-14">
+      <div class="bg-white p-6 rounded-xl border border-slate-200/80 flex items-start gap-4">
+        <div class="w-11 h-11 bg-tc-blue/10 rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-tc-blue text-xl">smartphone</span>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-base mb-1">Cambio de displays y baterías</h4>
+          <p class="text-slate-500 text-sm">Originales y de alta calidad.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-slate-200/80 flex items-start gap-4">
+        <div class="w-11 h-11 bg-tc-blue/10 rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-tc-blue text-xl">cable</span>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-base mb-1">Reemplazo de centros de carga</h4>
+          <p class="text-slate-500 text-sm">Flex originales y compatibles.</p>
+        </div>
+      </div>
+      <div class="bg-white p-6 rounded-xl border border-slate-200/80 flex items-start gap-4">
+        <div class="w-11 h-11 bg-tc-blue/10 rounded-lg flex items-center justify-center shrink-0">
+          <span class="material-symbols-outlined text-tc-blue text-xl">memory</span>
+        </div>
+        <div>
+          <h4 class="font-display font-bold text-base mb-1">Microsoldadura y componentes</h4>
+          <p class="text-slate-500 text-sm">Reparación a nivel placa.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Enfoque / Pre-diagnóstico y Transparencia -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Pre-diagnóstico -->
+      <div class="bg-white p-7 rounded-xl border border-slate-200/80">
+        <div class="w-11 h-11 bg-tc-amber/15 rounded-lg flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-tc-amber text-xl">stethoscope</span>
+        </div>
+        <h4 class="font-display font-bold text-lg text-tc-slate mb-3">Pre-diagnóstico y asesoría</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">Para nosotros, reparar va más allá de cambiar una pieza. Ofrecemos un pre-diagnóstico gratuito y una asesoría personalizada. Evaluamos cada caso para encontrar la solución más eficiente y duradera para ti.</p>
+        <p class="text-slate-500 text-sm leading-relaxed mt-3 italic">No solo reparamos: nos aseguramos de que entiendas lo que pasa y por qué.</p>
+      </div>
+      <!-- Tiempos -->
+      <div class="bg-white p-7 rounded-xl border border-slate-200/80">
+        <div class="w-11 h-11 bg-tc-amber/15 rounded-lg flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-tc-amber text-xl">schedule</span>
+        </div>
+        <h4 class="font-display font-bold text-lg text-tc-slate mb-3">Tiempos de servicio</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">Por lo general, una reparación está lista en <strong class="text-tc-slate">40 a 60 minutos</strong>. En horas de mayor afluencia o en trabajos que requieren microsoldadura, el tiempo puede ser mayor.</p>
+        <p class="text-slate-500 text-sm leading-relaxed mt-3 italic">Siempre te mantendremos informado.</p>
+      </div>
+      <!-- Transparencia -->
+      <div class="bg-white p-7 rounded-xl border border-slate-200/80">
+        <div class="w-11 h-11 bg-tc-amber/15 rounded-lg flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-tc-amber text-xl">visibility</span>
+        </div>
+        <h4 class="font-display font-bold text-lg text-tc-slate mb-3">Transparencia total</h4>
+        <p class="text-slate-600 text-sm leading-relaxed">Siempre que sea posible, puedes ver la reparación. Si el tipo de trabajo o el espacio no lo permiten, te explicaremos cada paso.</p>
+        <p class="text-slate-500 text-sm leading-relaxed mt-3 italic">La confianza se construye con transparencia.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- REFACCIONES ORIGINALES SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 bg-white" id="refacciones">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+      
+      <!-- Left: Content -->
+      <div class="lg:w-3/5">
+        <h2 class="text-tc-blue font-display font-bold tracking-widest text-sm uppercase mb-3">Refacciones</h2>
+        <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal mb-6">Refacciones Originales</h3>
+        
+        <div class="space-y-4 mb-10">
+          <p class="text-slate-600 leading-relaxed">En Two Cell entendemos que tu dispositivo fue diseñado por expertos.</p>
+          <p class="text-slate-600 leading-relaxed">Cada pieza tiene una funcionalidad que crea el equipo que tú elegiste. <strong class="text-tc-slate">Eso lo tenemos claro.</strong></p>
+          <p class="text-tc-blue font-bold text-lg">Por eso usamos exclusivamente refacciones originales.</p>
+          <p class="text-slate-500 italic">Es más que tener una pieza, estás adquiriendo tranquilidad.</p>
+        </div>
+
+        <!-- ¿Qué significa para el cliente? -->
+        <div class="mb-10">
+          <h4 class="font-display font-bold text-lg text-tc-slate mb-5">¿Qué significa eso para mi como cliente?</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tc-blue text-lg mt-0.5 shrink-0">check_circle</span>
+              <span class="text-slate-600">Tu pantalla conserva su brillo, color y sensibilidad original.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tc-blue text-lg mt-0.5 shrink-0">check_circle</span>
+              <span class="text-slate-600">Face ID, Touch ID y huella dactilar funcionan al 100%.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tc-blue text-lg mt-0.5 shrink-0">check_circle</span>
+              <span class="text-slate-600">La batería reporta correctamente su salud en el sistema.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tc-blue text-lg mt-0.5 shrink-0">check_circle</span>
+              <span class="text-slate-600">Tus accesorios inteligentes (como S-Pen) no pierden conexión ni respuesta.</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-tc-blue text-lg mt-0.5 shrink-0">check_circle</span>
+              <span class="text-slate-600">La misma durabilidad de origen, respaldada por la calidad del fabricante.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ¿Qué refacciones manejan? -->
+        <div>
+          <h4 class="font-display font-bold text-lg text-tc-slate mb-5">¿Qué refacciones manejan?</h4>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg">
+              <span class="material-symbols-outlined text-tc-amber text-lg">smartphone</span>
+              <span class="text-slate-700 text-sm font-medium">Displays y pantallas completas</span>
+            </div>
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg">
+              <span class="material-symbols-outlined text-tc-amber text-lg">cable</span>
+              <span class="text-slate-700 text-sm font-medium">Flex de carga y cables coaxiales</span>
+            </div>
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg">
+              <span class="material-symbols-outlined text-tc-amber text-lg">photo_camera</span>
+              <span class="text-slate-700 text-sm font-medium">Cámaras y módulos ópticos</span>
+            </div>
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg">
+              <span class="material-symbols-outlined text-tc-amber text-lg">battery_full</span>
+              <span class="text-slate-700 text-sm font-medium">Baterías con ciclos certificados</span>
+            </div>
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg">
+              <span class="material-symbols-outlined text-tc-amber text-lg">memory</span>
+              <span class="text-slate-700 text-sm font-medium">Componentes lógicos y placas</span>
+            </div>
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg">
+              <span class="material-symbols-outlined text-tc-amber text-lg">build</span>
+              <span class="text-slate-700 text-sm font-medium">Botones, blindajes y hardware</span>
+            </div>
+            <div class="flex items-center gap-3 bg-tc-gray px-4 py-3 rounded-lg sm:col-span-2">
+              <span class="material-symbols-outlined text-tc-amber text-lg">fingerprint</span>
+              <span class="text-slate-700 text-sm font-medium">Módulos de Face ID / Touch ID originales</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Images -->
+      <div class="lg:w-2/5 lg:sticky lg:top-28">
+        <div class="grid grid-cols-2 gap-3">
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="images/servicio-chip-detalle.jpg" alt="Microsoldadura de chip" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="images/servicio-microscopio.jpg" alt="Microscopio profesional" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="images/servicio-microsoldadura.jpg" alt="Vista microscópica de placa" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+          </div>
+          <div class="rounded-xl overflow-hidden shadow-lg">
+            <img src="images/refaccion-piezas-desmontadas.jpg" alt="Piezas desmontadas de celular" class="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- CELULARES CLÁSICOS SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 bg-tc-gray">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center">
+      <h2 class="text-tc-amber font-display font-bold tracking-widest text-sm uppercase mb-3">Nostalgia & Colección</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal mb-8">Celulares Clásicos</h3>
+      
+      <div class="bg-white rounded-xl p-8 sm:p-10 border border-slate-200/80 shadow-sm text-left space-y-5">
+        <p class="text-lg text-slate-700 leading-relaxed">¿Buscas ese Nokia indestructible que nunca moría? ¿O el Motorola RAZR que marcó una época?</p>
+        
+        <p class="text-slate-600 leading-relaxed">En el Centro Histórico, Two Cell se ha convertido en punto de referencia para coleccionistas, amantes de la tecnología clásica y hasta para producciones que necesitan el accesorio perfecto.</p>
+        
+        <p class="text-slate-500 leading-relaxed italic">Si llegaste por la recomendación de <strong class="text-tc-slate not-italic">@Alejogutierrezj</strong>, bienvenido. Gracias por confiar.</p>
+        
+        <p class="text-slate-600 leading-relaxed">Y aunque nos encuentres por la nostalgia, también tenemos talento para lo de hoy. Te ayudamos con tu equipo actual: reparación, venta de refacciones originales o asesoría técnica. Ven, platícanos qué buscas.</p>
+        
+        <div class="pt-4">
+          <a href="tel:5555124672" class="inline-flex items-center gap-2 bg-tc-blue text-white px-6 py-3 rounded-lg font-display font-bold text-sm hover:bg-tc-blue-dark transition-all shadow-lg shadow-tc-blue/20">
+            <span class="material-symbols-outlined text-lg">call</span>
+            55 5512 4672
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- STATS SECTION -->
+<!-- ============================================ -->
+<section class="py-16 sm:py-20 bg-tc-slate text-white overflow-hidden relative">
+  <div class="absolute inset-0 opacity-[0.04]" style="background-image: url('data:image/svg+xml,%3Csvg width=&quot;60&quot; height=&quot;60&quot; viewBox=&quot;0 0 60 60&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot;%3E%3Cg fill=&quot;none&quot; fill-rule=&quot;evenodd&quot;%3E%3Cg fill=&quot;%23ffffff&quot;%3E%3Cpath d=&quot;M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z&quot;/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 text-center relative z-10">
+    <div>
+      <p class="font-display text-4xl sm:text-5xl font-black text-tc-blue mb-2">16+</p>
+      <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Años de Trayectoria</p>
+    </div>
+    <div>
+      <p class="font-display text-4xl sm:text-5xl font-black text-tc-blue mb-2">50k+</p>
+      <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Equipos Reparados</p>
+    </div>
+    <div>
+      <p class="font-display text-4xl sm:text-5xl font-black text-tc-blue mb-2">100%</p>
+      <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Garantía Real</p>
+    </div>
+    <div>
+      <p class="font-display text-4xl sm:text-5xl font-black text-tc-amber mb-2">4.9/5</p>
+      <p class="text-slate-400 font-bold uppercase tracking-widest text-[10px] sm:text-xs">Google Reviews</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- TESTIMONIALS SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 bg-white" id="testimonios">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14">
+      <h2 class="text-tc-blue font-display font-bold tracking-widest text-sm uppercase mb-3">Testimonios</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal">Lo que dicen nuestros clientes</h3>
+      <p class="text-slate-500 mt-4 max-w-xl mx-auto">4.9 estrellas y 106 opiniones en Google nos respaldan. Estas son reseñas reales de nuestros clientes.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Review 1 - Jhonatan -->
+      <div class="bg-tc-gray p-7 rounded-xl border-b-4 border-tc-blue">
+        <div class="flex gap-0.5 mb-4">
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">"Llevé con ellos un celular oppo mojado y aunque se tardaron lo suyo dentro del mismo día, lo volvieron a dejar funcional. Joe siempre fue atento y servicial, por lo que los recomiendo ampliamente!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-tc-blue/20 rounded-full flex items-center justify-center text-tc-blue font-bold text-sm">J</div>
+          <div>
+            <p class="font-display font-bold text-sm">Jhonatan S.</p>
+            <p class="text-xs text-slate-400">Local Guide · Hace 2 semanas</p>
+          </div>
+        </div>
+      </div>
+      <!-- Review 2 - Bandiam -->
+      <div class="bg-tc-gray p-7 rounded-xl border-b-4 border-tc-amber">
+        <div class="flex gap-0.5 mb-4">
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">"Definitivamente es un lugar confiable y te atienden muy bien, te resuelven todas tus dudas y explican el porqué tu falla y cómo lo van a solucionar. Trabajan con piezas originales y reparan tu equipo muy rápido y en frente de ti. ¡RECOMENDADO!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-tc-amber/20 rounded-full flex items-center justify-center text-tc-amber-dark font-bold text-sm">B</div>
+          <div>
+            <p class="font-display font-bold text-sm">Bandiam Álvarez</p>
+            <p class="text-xs text-slate-400">Hace 7 meses</p>
+          </div>
+        </div>
+      </div>
+      <!-- Review 3 - Angeles -->
+      <div class="bg-tc-gray p-7 rounded-xl border-b-4 border-tc-blue">
+        <div class="flex gap-0.5 mb-4">
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">"Fui porque leí los comentarios positivos en Google y no me decepcionaron, justo como lo mencionan son amables y honestos con la reparaciones, desde el principio te dicen los costos y fue muy rápido, en menos de una hora ya pude usar mi cel."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-tc-blue/20 rounded-full flex items-center justify-center text-tc-blue font-bold text-sm">A</div>
+          <div>
+            <p class="font-display font-bold text-sm">Angeles Tovar</p>
+            <p class="text-xs text-slate-400">Hace 8 meses</p>
+          </div>
+        </div>
+      </div>
+      <!-- Review 4 - Juan -->
+      <div class="bg-tc-gray p-7 rounded-xl border-b-4 border-tc-amber">
+        <div class="flex gap-0.5 mb-4">
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">"Tengo un Galaxy Note 10 plus que me marcaba humedad y ya no cargaba, yo daba por hecho que era el centro de carga y el chico que me atendió super honesto le hizo una limpieza, lo probó y me dijo que no era necesario el cambio. Excelente atención, honestidad y confiabilidad!"</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-tc-amber/20 rounded-full flex items-center justify-center text-tc-amber-dark font-bold text-sm">J</div>
+          <div>
+            <p class="font-display font-bold text-sm">Juan Martínez</p>
+            <p class="text-xs text-slate-400">Hace 10 meses</p>
+          </div>
+        </div>
+      </div>
+      <!-- Review 5 - Axel -->
+      <div class="bg-tc-gray p-7 rounded-xl border-b-4 border-tc-blue">
+        <div class="flex gap-0.5 mb-4">
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">"Un muy buen servicio de calidad, profesionalismo y mucha confianza. Te explican bien sobre el problema de tu teléfono. Y muy buena vibra de todos los que atienden ahí. 100% recomendado."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-tc-blue/20 rounded-full flex items-center justify-center text-tc-blue font-bold text-sm">A</div>
+          <div>
+            <p class="font-display font-bold text-sm">Axel Álvarez</p>
+            <p class="text-xs text-slate-400">Hace 4 meses</p>
+          </div>
+        </div>
+      </div>
+      <!-- Review 6 - Fariiz -->
+      <div class="bg-tc-gray p-7 rounded-xl border-b-4 border-tc-amber">
+        <div class="flex gap-0.5 mb-4">
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+          <span class="material-symbols-outlined star-filled text-lg">star</span>
+        </div>
+        <p class="text-slate-600 text-sm leading-relaxed mb-5 italic">"Aquí consigues piezas 100% originales y con garantía, recomiendo este lugar ampliamente."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 bg-tc-amber/20 rounded-full flex items-center justify-center text-tc-amber-dark font-bold text-sm">F</div>
+          <div>
+            <p class="font-display font-bold text-sm">Fariiz Mg</p>
+            <p class="text-xs text-slate-400">Local Guide · Hace 11 meses</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-10">
+      <a href="https://maps.app.goo.gl/twocell" target="_blank" rel="noopener" class="inline-flex items-center gap-2 text-tc-blue font-display font-bold text-sm hover:text-tc-blue-dark transition-colors">
+        Ver las 106 reseñas en Google
+        <span class="material-symbols-outlined text-lg">open_in_new</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SOBRE NOSOTROS SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 bg-white" id="nosotros">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="text-tc-blue font-display font-bold tracking-widest text-sm uppercase mb-3">Nuestra Historia</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal">Sobre Nosotros</h3>
+    </div>
+
+    <div class="rounded-xl overflow-hidden shadow-lg mb-10">
+      <img src="images/sobre-nosotros.jpg" alt="Equipo TwoCell" class="w-full h-[300px] sm:h-[400px] object-cover">
+    </div>
+    
+    <div class="bg-white rounded-xl p-8 sm:p-10 border border-slate-200/80 shadow-sm space-y-5">
+      <p class="text-lg text-slate-700 leading-relaxed font-medium">Si alguna vez reparaste un celular y dejó de funcionar algo que antes sí servía, sabes exactamente de qué hablamos.</p>
+      
+      <p class="text-slate-600 leading-relaxed">Durante años, las refacciones genéricas fueron la única opción rápida. Cumplían a medias: la pantalla prendía, pero el brillo automático dejaba de funcionar. La batería cargaba, pero duraba la mitad. El teléfono "funcionaba", pero ya no era el mismo.</p>
+      
+      <p class="text-slate-600 leading-relaxed"><strong class="text-tc-blue">De ahí nace Two Cell.</strong> No de una gran visión empresarial, sino de una necesidad real: encontrar componentes que realmente devolvieran a cada equipo su capacidad original.</p>
+      
+      <p class="text-slate-600 leading-relaxed">Empezamos construyendo una red de proveedores que nos garantizara piezas 100% originales. Desde esos pequeños blindajes que muchos talleres ignoran —y que, sin embargo, están ahí por una razón— hasta pantallas completas que evitan despegar la original con riesgo. Todo para que un teléfono recupere lo que fue.</p>
+      
+      <p class="text-slate-600 leading-relaxed">Hoy, después de más de <strong class="text-tc-slate">16 años en el corazón de la CDMX</strong>, seguimos siendo de los pocos lugares en México que mantienen ese compromiso sin concesiones. Atendemos a técnicos y a personas como tú, que quieren recuperar su equipo con la tranquilidad de que quedará como debe ser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FAQ SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 bg-tc-gray" id="faq">
+  <div class="max-w-4xl mx-auto px-4">
+    <div class="text-center mb-14">
+      <h2 class="text-tc-blue font-display font-bold tracking-widest text-sm uppercase mb-3">Preguntas Frecuentes</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal">Todo lo que necesitas saber</h3>
+    </div>
+
+    <!-- Category Tabs -->
+    <div class="flex flex-wrap justify-center gap-2 mb-10" id="faq-tabs">
+      <button onclick="showFaqCategory('precios')" class="faq-tab active px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="precios">Precios</button>
+      <button onclick="showFaqCategory('garantia')" class="faq-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="garantia">Garantía</button>
+      <button onclick="showFaqCategory('tiempos')" class="faq-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="tiempos">Tiempos</button>
+      <button onclick="showFaqCategory('piezas')" class="faq-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="piezas">Piezas</button>
+      <button onclick="showFaqCategory('emergencias')" class="faq-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="emergencias">Emergencias</button>
+      <button onclick="showFaqCategory('pagos')" class="faq-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="pagos">Pagos</button>
+      <button onclick="showFaqCategory('general')" class="faq-tab px-4 py-2 rounded-lg text-sm font-semibold transition-all" data-tab="general">General</button>
+    </div>
+
+    <!-- ===== PRECIOS ===== -->
+    <div class="faq-category" id="faq-precios">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <!-- Q1 -->
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Cuánto cuesta cambiar la pantalla de iPhone?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Los precios varían según el modelo específico. Para obtener una cotización precisa, contáctanos al <a href="tel:5555124672" class="text-tc-blue font-semibold hover:underline">55 5512 4672</a> indicando tu modelo exacto.</p>
+          </div>
+        </div>
+        <!-- Q2 -->
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Cómo funciona el diagnóstico antes de reparar?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+              <p>Para darte una solución real y honesta, seguimos este proceso:</p>
+              <div class="bg-tc-gray rounded-lg p-4">
+                <p class="font-semibold text-tc-slate mb-1">Charla inicial (Pre-diagnóstico sin costo)</p>
+                <p>Escuchamos con atención las fallas que experimenta tu equipo. Hacemos una evaluación externa basada en esos síntomas y en nuestra experiencia para darte una idea general, ¡totalmente gratis!</p>
+              </div>
+              <div class="bg-tc-gray rounded-lg p-4">
+                <p class="font-semibold text-tc-slate mb-2">Diagnóstico a fondo</p>
+                <p class="mb-2">Si el equipo requiere una revisión interna, realizamos una apertura cuidadosa y una inspección detallada de cada componente.</p>
+                <ul class="space-y-1 ml-1">
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tc-blue text-sm">check</span> Equipos estándar: <strong class="text-tc-slate">$150 MXN</strong></li>
+                  <li class="flex items-center gap-2"><span class="material-symbols-outlined text-tc-blue text-sm">check</span> iPhone (por su alta complejidad): <strong class="text-tc-slate">Desde $250 MXN</strong></li>
+                </ul>
+              </div>
+              <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-tc-blue">
+                <p class="font-semibold text-tc-blue mb-1">Tu reparación te premia</p>
+                <p>Si decides reparar con nosotros, <strong>descontamos el 100% del costo del diagnóstico</strong> de tu cuenta final.</p>
+              </div>
+              <p class="text-slate-500 italic">Si prefieres no reparar en el momento, solo cubres el diagnóstico y te entregamos un informe completo de la situación de tu equipo.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== GARANTÍA ===== -->
+    <div class="faq-category hidden" id="faq-garantia">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">Nuestra Garantía: Tu tranquilidad es lo primero</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="space-y-4 text-sm text-slate-600 leading-relaxed">
+              <p>¡Queremos que te sientas seguro con tu reparación! Por eso, cuentas con <strong class="text-tc-slate">30 días naturales de garantía total</strong>. Si el componente que instalamos presenta alguna falla (siempre que no sea por causas externas como golpes o líquidos), lo revisaremos y solucionaremos sin costo adicional.</p>
+              <p>Para que podamos cumplirte al 100%, te pedimos que confíes el seguimiento solo en nuestras manos. Si permites que alguien más abra el equipo o lo lleve a otro taller, perdemos el control de la calidad que te garantizamos.</p>
+              <div class="bg-tc-gray rounded-lg p-4">
+                <p class="font-semibold text-tc-slate mb-2">Solo necesitas:</p>
+                <ul class="space-y-2">
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">check_circle</span> Visitarnos con tu nota original.</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">check_circle</span> Conservar el sello de garantía que colocamos en tu pieza.</li>
+                  <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">check_circle</span> ¡Dejarnos el resto a nosotros!</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">Cuidamos tu equipo y tu confianza</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p>Tu reparación cuenta con 30 días de garantía en piezas y mano de obra. Solo te pedimos:</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-amber text-sm mt-0.5">shield</span> <strong class="text-tc-slate">Protección mutua:</strong> Evita golpes, humedad o retirar el sello de seguridad.</li>
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-amber text-sm mt-0.5">shield</span> Si notas algo inusual, tráelo directamente con nosotros. Evita llevarlo a otro taller o abrirlo.</li>
+              </ul>
+              <p class="italic text-slate-500">Esta garantía no es una limitante, es nuestro compromiso de entregarte siempre un resultado impecable.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Qué pasa después del mes de garantía?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Aunque nuestra garantía oficial es de 30 días, para nosotros no eres un número más; nos importa crear una relación valiosa para ambos. Si después de este tiempo experimentas algún problema relacionado con nuestro servicio, tráelo para una revisión sin compromiso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== TIEMPOS ===== -->
+    <div class="faq-category hidden" id="faq-tiempos">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Cuánto tardan en reparar un celular?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p>Entendemos las complicaciones de estar desconectado(a). Por eso:</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">bolt</span> <strong class="text-tc-slate">Servicios exprés:</strong> Cambios de batería o piezas sencillas toman de 15 a 20 minutos.</li>
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">schedule</span> <strong class="text-tc-slate">Reparaciones estándar:</strong> La mayoría están listas en 40 a 60 minutos.</li>
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">precision_manufacturing</span> <strong class="text-tc-slate">Especialidades de laboratorio:</strong> Microsoldadura o componentes internos toman de 3 a 6 días hábiles para asegurar la calidad que nos distingue.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Es seguro dejar mi celular de un día para otro?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p>Queremos que estés tranquilo/a. Llevamos más de <strong class="text-tc-slate">16 años</strong> brindando este servicio y más de <strong class="text-tc-slate">10,000 equipos</strong> han pasado por nuestras manos. Todos han sido tratados con el mismo respeto y cuidado profesional.</p>
+              <p class="font-semibold text-tc-slate">Tu seguridad está respaldada por:</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">receipt_long</span> <strong class="text-tc-slate">Comprobante de recepción</strong> con todos los detalles técnicos.</li>
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">lock</span> <strong class="text-tc-slate">Área segura:</strong> Almacenamiento en un espacio dedicado y protegido.</li>
+                <li class="flex items-start gap-2"><span class="material-symbols-outlined text-tc-blue text-sm mt-0.5">chat</span> <strong class="text-tc-slate">Comunicación constante:</strong> Te informamos antes de tomar cualquier decisión importante.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Hay servicio a domicilio?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Actualmente atendemos únicamente en nuestra sucursal en Centro Histórico. Esto nos permite mantener el control de calidad y garantizar condiciones óptimas para cada reparación.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Puedo ver la reparación mientras la hacen?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Trabajamos con total transparencia y puedes observar el proceso, siempre que el espacio y el tipo de reparación lo permitan. En servicios de alta complejidad como la microsoldadura, requerimos un entorno controlado para asegurar el mejor resultado.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PIEZAS ===== -->
+    <div class="faq-category hidden" id="faq-piezas">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Usan refacciones originales o genéricas?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Trabajamos exclusivamente con refacciones originales. Te informamos sobre cualquier detalle relevante del componente antes de la instalación: compatibilidad, funciones preservadas y tiempo de vida útil esperado.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Venden refacciones sueltas?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Sí. Vendemos pantallas, baterías, cámaras, flexores y componentes individuales. Somos referente en piezas originales, de alta gama, para modelos descontinuados y marcas menos comerciales. Pregunta por disponibilidad al <a href="tel:5555124672" class="text-tc-blue font-semibold hover:underline">55 5512 4672</a>.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Qué modelos de celular reparan?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Reparamos iPhone, Samsung, Xiaomi, Motorola, Google Pixel, OnePlus, Huawei y más marcas. Sin compromiso alguno, pregunta por lo que estés buscando y con gusto te atenderemos.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== EMERGENCIAS ===== -->
+    <div class="faq-category hidden" id="faq-emergencias">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Qué hacer si mi celular cayó al agua?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="space-y-3 text-sm text-slate-600 leading-relaxed">
+              <p class="font-semibold text-tc-slate">Pasos inmediatos:</p>
+              <ul class="space-y-2">
+                <li class="flex items-start gap-2"><span class="font-bold text-red-500 shrink-0">1.</span> <strong class="text-tc-slate">Apágalo inmediatamente</strong> — No intentes encenderlo.</li>
+                <li class="flex items-start gap-2"><span class="font-bold text-red-500 shrink-0">2.</span> <strong class="text-tc-slate">NO lo cargues</strong> — La electricidad puede causar cortocircuitos fatales.</li>
+                <li class="flex items-start gap-2"><span class="font-bold text-red-500 shrink-0">3.</span> <strong class="text-tc-slate">Tráelo antes de encenderlo</strong> — Realizamos servicio de limpieza profunda y secado especializado.</li>
+              </ul>
+              <div class="bg-blue-50 rounded-lg p-4 border-l-4 border-tc-blue">
+                <p>En muchos casos, la limpieza profesional inmediata <strong>salva el equipo</strong> sin necesidad de reemplazar componentes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Reparan problemas de placa madre?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Sí. Realizamos microsoldadura y diagnóstico avanzado de componentes en placa madre, incluyendo identificación precisa del componente dañado.</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Qué tan urgente pueden reparar?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Muchas reparaciones se completan al momento o en 30-60 minutos. Contáctanos y explícanos tu situación: haremos todo lo posible para ayudarte en el menor tiempo posible.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== PAGOS ===== -->
+    <div class="faq-category hidden" id="faq-pagos">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Aceptan tarjeta de crédito?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Sí, aceptamos efectivo, transferencia bancaria y tarjeta (débito/crédito).</p>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Hay promociones o descuentos?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <p class="text-slate-600 text-sm leading-relaxed">Ofrecemos descuentos por volumen (técnicos y distribuidores) y beneficios para clientes recurrentes. Consulta promociones vigentes en tienda o al <a href="tel:5555124672" class="text-tc-blue font-semibold hover:underline">55 5512 4672</a>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== GENERAL ===== -->
+    <div class="faq-category hidden" id="faq-general">
+      <div class="bg-white rounded-xl shadow-sm border border-slate-200/80 divide-y divide-slate-100">
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Cuál es el horario de atención?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="text-sm text-slate-600 leading-relaxed space-y-1">
+              <p>Lunes a viernes de 10:00 a.m. a 7:00 p.m.</p>
+              <p>Sábados de 10:00 a.m. a 6:00 p.m.</p>
+            </div>
+          </div>
+        </div>
+        <div class="faq-item">
+          <button onclick="toggleFaq(this)" class="w-full flex justify-between items-center px-6 py-5 text-left">
+            <span class="font-display font-bold text-tc-slate pr-4">¿Hay área de espera cómoda?</span>
+            <span class="material-symbols-outlined text-slate-400 faq-chevron transition-transform duration-300 shrink-0">expand_more</span>
+          </button>
+          <div class="faq-answer hidden px-6 pb-5">
+            <div class="text-sm text-slate-600 leading-relaxed space-y-3">
+              <p>Estamos en Plaza Central 87. Aunque nos importa mucho tu comodidad, el espacio en la plaza y sus políticas nos limitan en cuanto a ofrecerte una sala de espera.</p>
+              <p class="text-tc-blue font-semibold">¡Pero aprovecha tu tiempo! Mientras nosotros nos encargamos de la reparación, puedes disfrutar de las maravillas que ofrece el Centro Histórico o adelantar otros pendientes importantes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- LOCATION SECTION -->
+<!-- ============================================ -->
+<section class="py-20 sm:py-24 bg-tc-gray" id="ubicacion">
+  <div class="max-w-7xl mx-auto px-4 flex flex-col lg:flex-row gap-10">
+    <div class="lg:w-2/5">
+      <h2 class="text-tc-blue font-display font-bold tracking-widest text-sm uppercase mb-3">Ubicación</h2>
+      <h3 class="font-display text-3xl sm:text-4xl font-black text-tc-slate tracking-normal mb-6">Visítanos hoy mismo</h3>
+      <p class="text-slate-500 mb-8 leading-relaxed">Estamos ubicados en el corazón del Centro Histórico, dentro de Plaza Central 87. Fácil acceso desde Metro Salto del Agua / San Juan de Letrán.</p>
+      <div class="space-y-5">
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-tc-blue text-white rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-lg">location_on</span>
+          </div>
+          <div>
+            <p class="font-display font-bold">Plaza Central 87, Local 300F, 2do Piso</p>
+            <p class="text-sm text-slate-500">Eje Central Lázaro Cárdenas #87, Col. Centro, C.P. 06000, CDMX</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-tc-blue text-white rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-lg">schedule</span>
+          </div>
+          <div>
+            <p class="font-display font-bold">Horario de Atención</p>
+            <p class="text-sm text-slate-500">Lunes - Viernes: 10:00 AM - 7:00 PM</p>
+            <p class="text-sm text-slate-500">Sábado: 10:00 AM - 6:00 PM</p>
+            <p class="text-sm text-slate-400">Domingo: Cerrado</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4">
+          <div class="w-10 h-10 bg-tc-blue text-white rounded-lg flex items-center justify-center shrink-0">
+            <span class="material-symbols-outlined text-lg">call</span>
+          </div>
+          <div>
+            <p class="font-display font-bold">Teléfono</p>
+            <a href="tel:5555124672" class="text-sm text-tc-blue hover:text-tc-blue-dark font-semibold transition-colors">55 5512 4672</a>
+          </div>
+        </div>
+      </div>
+      <a href="https://maps.app.goo.gl/twocell" target="_blank" rel="noopener" class="mt-8 w-full bg-tc-amber text-white h-14 rounded-lg font-display font-bold text-base flex items-center justify-center gap-2 hover:bg-tc-amber-dark transition-all shadow-lg shadow-tc-amber/20">
+        <span class="material-symbols-outlined">directions</span>
+        Cómo llegar con Google Maps
+      </a>
+    </div>
+    <div class="lg:w-3/5 space-y-4">
+      <!-- Photos grid -->
+      <div class="grid grid-cols-2 gap-4">
+        <div class="h-[250px] sm:h-[300px] rounded-xl overflow-hidden shadow-lg">
+          <img src="images/fachada-plaza.jpg" alt="Fachada de Plaza Central 87" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+        </div>
+        <div class="h-[250px] sm:h-[300px] rounded-xl overflow-hidden shadow-lg">
+          <img src="images/local-interior.jpg" alt="Interior del local TwoCell" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+        </div>
+      </div>
+      <!-- Google Maps Embed -->
+      <div class="h-[250px] rounded-xl overflow-hidden shadow-lg border border-slate-200">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d940.5!2d-99.14147!3d19.42744!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f929c7d5d4eb%3A0x12345!2sPlaza+Central+87%2C+Eje+Central+L%C3%A1zaro+C%C3%A1rdenas+87%2C+Centro%2C+06000+Ciudad+de+M%C3%A9xico%2C+CDMX!5e0!3m2!1ses!2smx!4v1707000000000!5m2!1ses!2smx"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- FOOTER -->
+<!-- ============================================ -->
+<footer class="bg-tc-slate text-white pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 mb-14">
+      <div>
+        <div class="flex items-center gap-3 mb-5">
+          <img src="images/logo-twocell.png" alt="TwoCell" class="h-10 w-auto brightness-0 invert">
+          <span class="font-display text-xl font-black tracking-tight">TWOCELL</span>
+        </div>
+        <p class="text-slate-400 text-sm leading-relaxed">Expertos en reparación de celulares y refacciones originales con más de 16 años de experiencia en el Centro Histórico de la CDMX.</p>
+      </div>
+      <div>
+        <h5 class="font-display font-bold mb-5 text-base">Servicios</h5>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li>Cambio de Pantalla</li>
+          <li>Baterías Originales</li>
+          <li>Micro-soldadura</li>
+          <li>Recuperación de Datos</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-display font-bold mb-5 text-base">Refacciones</h5>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li>Displays Originales</li>
+          <li>Flex de Carga</li>
+          <li>Cables Coaxiales</li>
+          <li>Baterías Certificadas</li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="font-display font-bold mb-5 text-base">Contacto</h5>
+        <ul class="space-y-3 text-slate-400 text-sm">
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-tc-blue text-base">call</span>
+            <a href="tel:5555124672" class="hover:text-white transition-colors">55 5512 4672</a>
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-tc-blue text-base">location_on</span>
+            Plaza Central 87, Local 300F
+          </li>
+          <li class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-tc-blue text-base">schedule</span>
+            Lun-Sáb: 10am-7pm
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="pt-6 border-t border-slate-800 flex flex-col sm:flex-row justify-between items-center gap-4 text-slate-500 text-xs font-medium">
+      <p>&copy; 2025 TwoCell CDMX. Todos los derechos reservados.</p>
+      <p>Creado por Alfonso Boldo</p>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================ -->
+<!-- FLOATING CALL BUTTON -->
+<!-- ============================================ -->
+<a href="tel:5555124672" class="fixed bottom-6 right-6 z-[100] bg-green-500 text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform group call-pulse">
+  <span class="material-symbols-outlined filled text-3xl">call</span>
+  <div class="absolute right-[72px] bg-white text-slate-900 px-4 py-2.5 rounded-lg shadow-xl border border-slate-100 font-display font-bold text-sm whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+    Llámanos: 55 5512 4672
+  </div>
+</a>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="fixed inset-0 z-[200] bg-black/90 hidden items-center justify-center p-4 cursor-pointer" onclick="closeLightbox()">
+  <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white/80 hover:text-white transition-colors">
+    <span class="material-symbols-outlined text-4xl">close</span>
+  </button>
+  <img id="lightbox-img" src="" alt="" class="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl">
+</div>
+
+<!-- FAQ Scripts -->
+<script>
+function openLightbox(src, alt) {
+  const lb = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  img.alt = alt;
+  lb.classList.remove('hidden');
+  lb.classList.add('flex');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+  const lb = document.getElementById('lightbox');
+  lb.classList.add('hidden');
+  lb.classList.remove('flex');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeLightbox();
+});
+
+function showFaqCategory(category) {
+  // Hide all categories
+  document.querySelectorAll('.faq-category').forEach(el => el.classList.add('hidden'));
+  // Show selected
+  document.getElementById('faq-' + category).classList.remove('hidden');
+  // Update tabs
+  document.querySelectorAll('.faq-tab').forEach(tab => {
+    tab.classList.remove('active');
+    if (tab.dataset.tab === category) tab.classList.add('active');
+  });
+  // Close all open answers in the new category
+  document.querySelectorAll('#faq-' + category + ' .faq-answer').forEach(a => a.classList.add('hidden'));
+  document.querySelectorAll('#faq-' + category + ' .faq-chevron').forEach(c => c.classList.remove('open'));
+}
+
+function toggleFaq(btn) {
+  const answer = btn.nextElementSibling;
+  const chevron = btn.querySelector('.faq-chevron');
+  const isOpen = !answer.classList.contains('hidden');
+  
+  // Close all in same category
+  const category = btn.closest('.faq-category');
+  category.querySelectorAll('.faq-answer').forEach(a => a.classList.add('hidden'));
+  category.querySelectorAll('.faq-chevron').forEach(c => c.classList.remove('open'));
+  
+  // Toggle current
+  if (!isOpen) {
+    answer.classList.remove('hidden');
+    chevron.classList.add('open');
+  }
+}
+</script>
+
+</body>
+</html>
