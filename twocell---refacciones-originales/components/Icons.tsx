@@ -9,7 +9,7 @@ interface IconProps {
 // ASSETS - Logo Configuration
 // ============================================
 // Using a GitHub-hosted image for professional hosting and version control.
-const LOGO_URL = "https://raw.githubusercontent.com/Aris-dot/twocell-website/refs/heads/main/Logo%20Twocell.png";
+const LOGO_URL = const LOGO_URL = "https://raw.githubusercontent.com/Aris-dot/twocell-website/main/images/logo-twocell.png";
 
 // Icono del logo de TwoCell
 export const TwoCellLogo: React.FC = () => (
